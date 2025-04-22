@@ -1,0 +1,124 @@
+m255
+K4
+z2
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/pkg
+Pdata_types
+Z1 DPx4 ieee 9 math_real 0 22 :8NNHF3SFI6^on5?4X[S`1
+Z2 DPx4 ieee 17 fixed_float_types 0 22 ffi_ZLQ=jLAmYO?69bja?3
+Z3 DBx4 ieee 17 fixed_generic_pkg 4 body 22 oEANA[?]]:^NiaRa4al943
+Z4 DPx4 ieee 9 fixed_pkg 0 22 PQo]@iK^QBglmSTZ7kJDK3
+Z5 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z6 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z7 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 6
+Z8 w1706617365
+R0
+Z9 8data_types.vhdl
+Z10 Fdata_types.vhdl
+l0
+L8 16
+VM?Y7O1aCh224jHCBKd]mk2
+!s100 _>bR2:YV2DnVbYB9>@l0R1
+Z11 OL;C;2023.3;77
+33
+Z12 !s110 1709578755
+!i10b 1
+Z13 !s108 1709578755.000000
+Z14 !s90 -reportprogress|300|data_types.vhdl|
+Z15 !s107 data_types.vhdl|
+!i113 0
+Z16 tExplicit 1 NoCoverage 1 CvgOpt 0
+Bbody
+Z17 DPx4 work 10 data_types 0 22 M?Y7O1aCh224jHCBKd]mk2
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 6
+l0
+Z18 L26 4
+Z19 VBZc8d9jV3P?98H0keiZhB2
+Z20 !s100 :n;OTK::;L>FYXl=4K`Z[0
+R11
+33
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+Pfixed_float_types
+!i122 3
+R8
+R0
+8fixed_float_types_c.vhdl
+Ffixed_float_types_c.vhdl
+l0
+L16 19
+VVGllOEW0gOJXcS0@d9EA=1
+!s100 OA[c0lVN>D0<bV_b<7mC32
+R11
+33
+!s110 1709578534
+!i10b 1
+!s108 1709578534.000000
+!s90 -reportprogress|300|fixed_float_types_c.vhdl|
+!s107 fixed_float_types_c.vhdl|
+!i113 0
+R16
+Pfixed_pkg
+Z21 DPx13 ieee_proposed 17 fixed_float_types 0 22 VGllOEW0gOJXcS0@d9EA=1
+R5
+R7
+R6
+!i122 5
+Z22 w1709578730
+R0
+Z23 8fixed_pkg_c.vhdl
+Z24 Ffixed_pkg_c.vhdl
+l0
+L25 1429
+VAk?Nh4L1T]UEmK]U@;GbW2
+!s100 NT1]UWakZgO4L7U4cl;^j2
+R11
+33
+b1
+Z25 !s110 1709578736
+!i10b 1
+Z26 !s108 1709578736.000000
+Z27 !s90 -reportprogress|300|fixed_pkg_c.vhdl|
+Z28 !s107 fixed_pkg_c.vhdl|
+!i113 0
+R16
+Bbody
+DPx4 work 9 fixed_pkg 0 22 Ak?Nh4L1T]UEmK]U@;GbW2
+R1
+R21
+R5
+R7
+R6
+!i122 5
+l0
+L1466 6913
+Vo=X[1hijN3PXJ<PIGHKPP0
+!s100 Q;83AP[oE607cCWR=elnZ1
+R11
+33
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R16

@@ -1,0 +1,124 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.fixed_float_types.all;
+use ieee.fixed_pkg.all;
+use std.textio.all;
+
+library hw_chaos;
+use hw_chaos.data_types.all;
+
+library vunit_lib;
+context vunit_lib.vunit_context;
+context vunit_lib.com_context;
+context vunit_lib.data_types_context;
+use vunit_lib.axi_stream_pkg.all;
+use vunit_lib.stream_master_pkg.all;
+use vunit_lib.stream_slave_pkg.all;
+
+library osvvm;
+use osvvm.RandomPkg.all;
+
+entity tb is
+  generic (
+    runner_cfg : string;
+    INT_PART : integer := 7;
+    FRAC_PART : integer := 16;
+    WORD : integer := INT_PART + FRAC_PART
+  );
+end entity;
+
+architecture RTL of tb is
+
+	constant CLK_PERIOD : time := 1 ns;
+
+	signal clk      : std_logic := '1';
+	signal rst      : std_logic := '0';
+	signal o_tdata : aslv(0 to 3-1)(WORD-1 downto 0) := (others => (others => '0'));
+	signal o_tdata_sfi  : asfi(0 to 3-1)(INT_PART-1 downto -FRAC_PART) := (others => (others => '0'));
+	 
+	 
+	 signal o_addr  : slv(11 downto 0) := (others => '0');
+	 signal o_d_out : slv(13 downto 0) := (others => '0');
+	 signal o_d_out_sfi : sfi(8-1 downto -6) := (others => '0');
+
+	
+	file csv_file_X : text;
+	file csv_file_Y : text;
+	file csv_file_Z : text;	
+
+begin
+
+	clk <= not clk after CLK_PERIOD/2;
+	rst <= '0' after CLK_PERIOD;
+
+	------------------------------------------------------------------------------------
+	--DUT instantiation
+	------------------------------------------------------------------------------------
+
+	DUT: entity hw_chaos.RC2_oscillator
+		generic map (
+			a => 10.0,
+			b => 14.102584838867188,
+			u => 0.2022,
+			k_1 => 5.5500, 
+			k_2 => 4.4615,
+			k_3 => 4.5, -- k_1 - 1
+			k_4 => 3.5, -- k_1 - 2
+			k_5 => 15.5, -- k_1 + a
+	
+			dt => 0.001007080078125,
+	
+			INT_PART => INT_PART,
+			FRAC_PART => FRAC_PART,
+			WORD => WORD
+		)
+		port map (
+			clk => clk,
+			rst => rst,
+
+			o_addr => o_addr,
+			o_d_out => o_d_out,
+			o_d_out_sfi => o_d_out_sfi,
+	
+			o_tdata => o_tdata
+		);
+		
+	o_tdata_sfi(X_POS) <= to_sfixed(o_tdata(X_POS), INT_PART-1, -FRAC_PART);
+	o_tdata_sfi(Y_POS) <= to_sfixed(o_tdata(Y_POS), INT_PART-1, -FRAC_PART);
+	o_tdata_sfi(Z_POS) <= to_sfixed(o_tdata(Z_POS), INT_PART-1, -FRAC_PART);
+	
+
+	------------------------------------------------------------------------------------
+	--Test sequencer
+	------------------------------------------------------------------------------------
+	process
+  	begin
+    	test_runner_setup(runner, runner_cfg);
+		
+		file_open(csv_file_X, "OUTPUT_X.csv", write_mode);
+		file_open(csv_file_Y, "OUTPUT_Y.csv", write_mode);
+		file_open(csv_file_Z, "OUTPUT_Z.csv", write_mode);
+		--write(csv_file, "X_POS, Y_POS, Z_POS");  -- Header
+    
+while now < 100000 ns loop
+
+
+    wait for 1 ns; -- Adjust the time delay as needed
+
+    -- Write each element of the o_tdata_sfi array to the CSV file
+		write(csv_file_X, to_string(to_real(o_tdata_sfi(X_POS))) & ",");
+		write(csv_file_Y, to_string(to_real(o_tdata_sfi(Y_POS))) & ",");
+		write(csv_file_Z, to_string(to_real(o_tdata_sfi(Z_POS))) & ",");
+    
+  end loop;
+		
+		file_close(csv_file_X);
+		file_close(csv_file_Y);
+		file_close(csv_file_Z);
+    
+ 
+	 
+    	test_runner_cleanup(runner);
+  end process;
+end architecture;

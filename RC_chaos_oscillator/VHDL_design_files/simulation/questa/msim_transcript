@@ -1,0 +1,84 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do main_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:22:50 on Mar 07,2024
+# vcom -reportprogress 300 -2008 -work work C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package functions
+# -- Compiling package body functions
+# -- Loading package functions
+# End time: 14:22:50 on Mar 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib ieee_proposed
+# ** Warning: (vlib-34) Library already exists at "ieee_proposed".
+# Errors: 0, Warnings: 1
+# vmap ieee_proposed ieee_proposed
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap ieee_proposed ieee_proposed 
+# Modifying modelsim.ini
+# vcom -2008 -work ieee_proposed {C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_float_types_c.vhdl}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:22:50 on Mar 07,2024
+# vcom -reportprogress 300 -2008 -work ieee_proposed C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_float_types_c.vhdl 
+# -- Loading package STANDARD
+# -- Compiling package fixed_float_types
+# End time: 14:22:50 on Mar 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work ieee_proposed {C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:22:50 on Mar 07,2024
+# vcom -reportprogress 300 -2008 -work ieee_proposed C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Compiling package fixed_pkg
+# ** Error: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1421): (vcom-1295) Function "to_ufixed" has already been defined in this region.
+# ** =====> Prior declaration of "to_ufixed" is at C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1048).
+# ** Error: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1426): (vcom-1295) Function "to_ufixed" has already been defined in this region.
+# ** =====> Prior declaration of "to_ufixed" is at C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1054).
+# ** Error: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1432): (vcom-1295) Function "to_sfixed" has already been defined in this region.
+# ** =====> Prior declaration of "to_sfixed" is at C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1059).
+# ** Error: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1437): (vcom-1295) Function "to_sfixed" has already been defined in this region.
+# ** =====> Prior declaration of "to_sfixed" is at C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1065).
+# ** Error: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1444): (vcom-1295) Function "to_UFix" has already been defined in this region.
+# ** =====> Prior declaration of "to_UFix" is at C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1078).
+# ** Error: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1451): (vcom-1295) Function "to_SFix" has already been defined in this region.
+# ** =====> Prior declaration of "to_SFix" is at C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1085).
+# ** Note: C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl(1453): VHDL Compiler exiting
+# End time: 14:22:51 on Mar 07,2024, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+# ** Error: c:/intelfpga_lite/23.1std/questa_fse/win64/vcom failed.
+# Error in macro ./main_run_msim_rtl_vhdl.do line 12
+# c:/intelfpga_lite/23.1std/questa_fse/win64/vcom failed.
+#     while executing
+# "vcom -2008 -work ieee_proposed {C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl}"

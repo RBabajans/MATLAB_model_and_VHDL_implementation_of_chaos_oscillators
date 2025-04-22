@@ -1,0 +1,14 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -2008 -work work {C:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl}
+vcom -2008 -work work {C:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_float_types_c.vhdl}
+vcom -2008 -work work {C:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/pkg/fixed_pkg_c.vhdl}
+vcom -2008 -work work {C:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/pkg/data_types.vhdl}
+vcom -2008 -work work {C:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/deriv_calc_RC2.vhdl}
+vcom -2008 -work work {C:/Users/Ruslans Babajans/Desktop/ChaosVhdl/RC2_attempt_1/RC2_oscillator.vhdl}
+

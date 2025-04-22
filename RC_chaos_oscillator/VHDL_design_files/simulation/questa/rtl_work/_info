@@ -1,0 +1,55 @@
+m255
+K4
+z2
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/simulation/questa
+Pfunctions
+Z1 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+Z4 w1709107718
+R0
+Z5 8C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl
+Z6 FC:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl
+l0
+L5 5
+Vd4aiR^<3XEE107eYH6B3W2
+!s100 nn1UzFgS[g3MjhP1Z[VGH3
+Z7 OL;C;2023.3;77
+33
+b1
+Z8 !s110 1709814170
+!i10b 1
+Z9 !s108 1709814170.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl|
+!s107 C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl|
+!i113 0
+Z11 o-2008 -work work
+Z12 tExplicit 1 CvgOpt 0
+Bbody
+DPx4 work 9 functions 0 22 d4aiR^<3XEE107eYH6B3W2
+R1
+R2
+R3
+!i122 0
+l0
+L12 16
+VOS;]UL;zOY`;5azal0DhC0
+!s100 l`XS8_oZ8Zz9WBYDDA;LA3
+R7
+33
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 C:/Users/rusla/Desktop/ChaosVhdl/RC2_attempt_1/pkg/functions.vhdl|
+!i113 0
+R11
+R12
